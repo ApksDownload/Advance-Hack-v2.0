@@ -17,9 +17,9 @@
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
             background: #1f2935;
             border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
         }
         .apk-header {
             position: relative;
@@ -34,6 +34,7 @@
             font-weight: bold;
             margin: 10px 0;
             text-transform: uppercase;
+            text-shadow: 0 0 10px #ff6a00, 0 0 20px #ff8c00, 0 0 30px #ffaa00;
         }
         .download-btn {
             display: inline-block;
@@ -51,24 +52,28 @@
             transform: scale(1.1);
             transition: all 0.3s ease-in-out;
         }
-        .screenshots {
+        .slider-container {
+            overflow-x: auto;
             display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+            padding: 10px;
         }
-        .screenshots img {
-            width: 45%;
-            border-radius: 10px;
+        .slider-container::-webkit-scrollbar {
+            display: none; /* Hide scrollbar */
+        }
+        .slider-container img {
+            flex-shrink: 0;
+            width: 120px;
+            height: 200px;
+            border-radius: 12px;
+            object-fit: cover;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
         }
         .description {
             margin-top: 20px;
             font-size: 18px;
             line-height: 1.5;
-        }
-        .glow-text {
-            text-shadow: 0 0 10px #ff6a00, 0 0 20px #ff8c00, 0 0 30px #ffaa00;
         }
     </style>
 </head>
@@ -77,24 +82,24 @@
 <div class="container">
     <!-- APK Header -->
     <div class="apk-header">
-        <img src="logo.png" alt="APK Logo" class="apk-logo">
-        <div class="apk-name glow-text">Advance Hack v2.0</div>
+        <img src="apk-logo.png" alt="APK Logo" class="apk-logo">
+        <div class="apk-name">Your APK Name</div>
     </div>
 
     <!-- APK Download Button -->
-    <a href="your-apk-file.apk" class="download-btn" download>Download Now</a>
+    <a href="Advance Hack V2.0.apk" class="download-btn" download>Download Now</a>
 
     <!-- Screenshots Section -->
-    <div class="screenshots">
-        <img src="proof1.png" alt="Screenshot 1">
-        <img src="proof2.png" alt="Screenshot 2">
-        <img src="proof3.png" alt="Screenshot 3">
-        <img src="proof4.png" alt="Screenshot 4">
+    <div class="slider-container">
+        <img src="screenshot1.jpg" alt="Screenshot 1">
+        <img src="screenshot2.jpg" alt="Screenshot 2">
+        <img src="screenshot3.jpg" alt="Screenshot 3">
+        <img src="screenshot4.jpg" alt="Screenshot 4">
     </div>
 
     <!-- Description -->
     <div class="description">
-        <p>Enjoy quick, safe, and easy access! (colour prediction hack added ) 100% working  , 100% free , 100% SAFE</p>
+        <p>Enjoy quick, safe, and easy access to the latest version of our APK. Fast download speeds and no limits await!</p>
     </div>
 </div>
 
